@@ -1,0 +1,94 @@
+.bed {
+    position: absolute;
+    width: 121px;
+    height: 174px;
+    z-index: 2;
+}
+
+.bed.hidden {
+    display: none;
+}
+
+.bed.cond-low {
+    background: url(../img/furniture/bed-low.png) 0 0 no-repeat;
+}
+.bed.cond-low.bleed {
+    background: url(../img/furniture/bed-low-bleed.png) 0 0 no-repeat;
+}
+.bed.cond-low.limp {
+    background: url(../img/furniture/bed-low-limp.png) 0 0 no-repeat;
+}
+.bed.cond-low.sick {
+    background: url(../img/furniture/bed-low-sick.png) 0 0 no-repeat;
+}
+
+.bed.cond-mid {
+    background: url(../img/furniture/bed-mid.png) 0 0 no-repeat;
+}
+.bed.cond-mid.bleed {
+    background: url(../img/furniture/bed-mid-bleed.png) 0 0 no-repeat;
+}
+.bed.cond-mid.limp {
+    background: url(../img/furniture/bed-mid-limp.png) 0 0 no-repeat;
+}
+.bed.cond-mid.sick {
+    background: url(../img/furniture/bed-mid-sick.png) 0 0 no-repeat;
+}
+
+.bed.cond-high {
+    background: url(../img/furniture/bed-high.png) 0 0 no-repeat;
+}
+.bed.cond-high.bleed {
+    background: url(../img/furniture/bed-high-bleed.png) 0 0 no-repeat;
+}
+.bed.cond-high.limp {
+    background: url(../img/furniture/bed-high-limp.png) 0 0 no-repeat;
+}
+.bed.cond-high.sick {
+    background: url(../img/furniture/bed-high-sick.png) 0 0 no-repeat;
+}
+
+.bed-extension {
+    position: absolute;
+    width: 120px;
+    z-index: 4;
+}
+
+.bed-extension.hidden {
+    display: none;
+}
+
+.bed-extension .health-meter {
+    height: 3px;
+    background-color: rgba(9, 19, 28, 0.5);
+    width: 30px;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+.bed-extension .health-meter .bar {
+    height: 3px;
+    width: 1%;
+    border-radius: 2px;
+    display: block;
+}
+
+.bed-extension.crit .health-meter .bar {
+    background-color: rgb(231, 87, 87);
+}
+.bed-extension.medium .health-meter .bar {
+    background-color: rgb(253, 182, 49);
+}
+.bed-extension.okay .health-meter .bar {
+    background-color: rgb(87, 231, 99);
+}
+
+.sink {
+    position: absolute;
+    width: 51px;
+    height: 73px;
+    right: 128px;
+    bottom: 225px;
+    z-index: 9;
+    background: url(../img/furniture/sink.png) 0 0 no-repeat;
+}

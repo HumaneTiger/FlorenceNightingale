@@ -1,0 +1,263 @@
+#survivors {
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    font-size: 1.6em;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(0, 11, 14, 0.5);
+    border-radius:  0 30px  30px 0;
+    padding: 10px 20px 10px 10px;
+}
+
+#victims {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    font-size: 1.6em;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(0, 11, 14, 0.5);
+    border-radius:  30px 0 0 30px;
+    padding: 10px 20px 10px 10px;
+}
+
+a.button {
+    border: 0 none;
+    font-family: 'Newsreader', serif;
+    box-shadow: 0 0 4px rgba(0,0,0,1);
+    font-weight: 300;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 1px;
+    margin: 0 3%;
+    display: inline-block;
+    background: radial-gradient(closest-side, #fff 0%, #fff 85%, #eec965 95%, rgba(145,112,59,1) 110%, rgba(163,126,67,1) 130%);
+    transition: transform 0.05s ease-out;
+    vertical-align: top;
+}
+
+a.button span[data-tooltip]::after {
+  content: attr(data-tooltip);
+  color: #eec965;
+  font-weight: 300;
+  border: 1px rgba(163,126,67,1) solid;
+  background-color: rgba(0, 41, 44, 0.85);
+  box-shadow: 0 0 4px rgba(0,0,0,1);
+  position: absolute;
+  top: -100vh;
+  left: 0;
+  padding: 2px 8px;
+  margin: 0 -18px;
+  opacity: 0;
+  transition: opacity 0.4s ease-out;
+}
+
+a.button span[data-tooltip]:hover::after {
+  opacity: 1;
+  top: 80%;
+}
+
+a.button.hidden {
+    margin-left: -150vw;
+}
+
+a.button span {
+    display: inline-block;
+    padding: 6px 6px 2px;
+    margin: 0;
+    background-image: url(../img/ui/button.png);
+    background-size: cover;
+    color: #eec965;
+    letter-spacing: 2px;
+    line-height: 1em;
+}
+
+a.button span i {
+    font-style: normal;
+}
+
+a.button.primary span {
+    font-weight: 600;
+}
+
+a.button.primary small {
+    font-weight: 300;
+    letter-spacing: 0;
+}
+
+a.button:hover {
+    transform: translateY(-1px) scale(1.1);
+}
+
+a.button:active {
+    transform: translateY(0);
+}
+
+a.button {
+    position: absolute;
+    z-index: 11;
+}
+
+a.cook {
+    left: 840px;
+    top: 200px;
+}
+.meter.cook {
+    left: 836px;
+    top: 143px;
+}
+.meals {
+    left: 840px;
+    top: 230px;
+}
+
+a.wash {
+    left: 870px;
+    top: 560px;
+}
+
+a.fetch {
+    left: 790px;
+    top: 610px;
+}
+.meter.fetch {
+    left: 845px;
+    top: 700px;
+}
+
+a.write {
+    left: 890px;
+    top: 360px;
+}
+
+#ui {
+    background-color: rgba(9, 19, 28, 0.7);
+    border: 1px rgba(255, 255, 255, 0.7) solid;
+    border-radius: 10px;
+    padding: 0 10px;
+    height: 90px;
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    right: 8px;
+}
+
+#ui ul,
+#ui li {
+    margin: 0;
+    padding: 0;
+}
+
+#ui ul li {
+    display: inline-block;
+    width: 20%;
+    text-align: center;
+    position: relative;
+    color:rgba(255, 255, 255, 0.75);
+    height: 52px;
+}
+
+#ui ul li.money .logo {
+    width: 75px;
+    position: absolute;
+    left: 20px;
+    top: 5px;
+    vertical-align: top;
+}
+#ui ul li.money p {
+    position: absolute;
+    left: 110px;
+    top: 25px;
+    vertical-align: top;
+    color: #fff2b7;
+    font-size: 2em;
+}
+#ui ul li.soap {
+    margin-left: 30px;
+}
+#ui ul li a.button {
+    position: relative;
+}
+#ui ul li a.button span {
+    padding: 10px 20px;
+}
+#ui ul li p {
+    margin: 0 0 0.5em;
+}
+#ui ul li p span {
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.meter {
+    position: absolute;
+    z-index: 13;
+    border-radius: 2px;
+    width: 100px;
+    height: 5px;
+    border: 1px rgba(255, 255, 255, 0.75) solid;
+    background-color: rgba(9, 19, 28, 0.7);
+}
+
+.meter .bar {
+    height: 3px;
+    width: 80%;
+    border-radius: 2px;
+    display: block;
+    background-color: rgb(118, 223, 255);
+    box-shadow: 0 0 5px rgba(53, 206, 253, 1);
+}
+
+.meals {
+    position: absolute;
+    z-index: 13;
+    height: 20px;
+}
+
+.meals span {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    background: url(../img/icons/food.png) 0 0 no-repeat;
+    margin-left: -25px;
+}
+
+#ui-bed {
+    position: absolute;
+    width: 140px;
+    list-style-type: none;
+    transform: translateY(50%);
+    z-index: 3;
+    margin: 0;
+    padding: 0;
+}
+#ui-bed.hidden {
+    display: none;
+}
+
+#ui-bed li {
+    margin: 6px 0;
+    text-align: center;
+}
+
+#ui-bed li.hidden {
+    display: none;
+}
+
+#ui-bed a.button {
+    position: relative;
+    font-size: 0.9em;
+    opacity: 0.6;
+}
+#ui-bed a.button span {
+    padding-top: 3px;
+    padding-bottom: 1px;
+}
+
+#ui-bed li.inactive a span {
+    color: red;
+}
+
+#ui-bed a.button:hover {
+    opacity: 1;
+}
+

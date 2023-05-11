@@ -1,0 +1,116 @@
+﻿<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title>Florence Nightingale</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/ui.css">
+    <link rel="stylesheet" href="css/furniture.css">
+    <link rel="stylesheet" href="css/soldier.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@300;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <main>
+    <div id="playground">
+
+      <div id="survivors">
+        Survivors: <span>0</span>
+      </div>
+      <div id="victims">
+        Victims: <span>0</span>
+      </div>
+      <div class="bed cond-low hidden"></div>
+      <div class="bed-extension hidden">
+        <div class="health-meter"><span class="bar"></span></div>
+        <div class="health-anim"></div>
+      </div>
+
+      <div class="soldier"></div>
+
+      <div id="soldier-pool"></div>
+      <div id="bed-pool"></div>
+
+      <div class="sink"></div>
+
+      <a href="#" class="button cook" onclick="actionCook(event)"><span>Cook Meal ⏱⏱</span></a>
+
+      <div class="meals">
+        <span></span>
+        <span></span>
+      </div>
+
+      <a href="#" class="button fetch" onclick="actionFetch(event)"><span>Fetch Water ⏱⏱</span></a>
+      <span class="meter fetch">
+        <span class="bar"></span>
+      </span>
+      <a href="#" class="button write" onclick="actionWrite(event)"><span>Write Plea ⏱⏱⏱</span></a>
+      <a href="#" class="button wash" onclick="actionWash(event)"><span>Wash Hands ⏱</span></a>
+
+      <ul id="ui-bed" class="hidden">
+        <li class="assign"><a href="#" class="button" onclick="bedAssign(event)"><span>Assign</span></a></li>
+        <li class="upgrade-mid"><a href="#" class="button" onclick="bedUpgradeMid(event)"><span>Upgrade (10)</span></a></li>
+        <li class="upgrade-high"><a href="#" class="button" onclick="bedUpgradeHigh(event)"><span>Upgrade (15)</span></a></li>
+        <li class="meal"><a href="#" class="button" onclick="bedMeal(event)"><span>Give Meal</span></a></li>
+        <li class="meds"><a href="#" class="button" onclick="bedMeds(event)"><span>Give Meds</span></a></li>
+        <li class="clean"><a href="#" class="button" onclick="bedClean(event)"><span>Clean</span></a></li>
+      </ul>
+
+      <div id="ui">
+        <ul>
+          <li class="money">
+            <img class="logo" src="img/icons/coin.png">
+            <p><span>45</span></p>
+          </li>
+          <li class="soap">
+            <p>You have <span>4</span> soaps for cleaning.</p>
+            <a href="#" class="button buy-soap" onclick="buySoap(event)"><span>Buy Soap (<i>1</i>)</span></a>
+          </li>
+          <li class="food">
+            <p>You have <span>8</span> food for cooking.</p>
+            <a href="#" class="button buy-food" onclick="buyFood(event)"><span>Buy Food (<i>2</i>)</span></a>
+          </li>
+          <li class="meds">
+            <p>You have <span>2</span> meds.</p>
+            <a href="#" class="button buy-meds" onclick="buyMeds(event)"><span>Buy Meds (<i>5</i>)</span></a>
+          </li>
+        </ul>
+      </div>
+      <div class="playground-shadow"></div>
+    </div>
+  </main>
+
+  <div class="ui-blocker hidden">
+    <div class="inner"></div>
+  </div>
+
+  <div id="all-audio">
+    <!-- LOOP -->
+    <audio class="calm" src="sound/music/background.wav" preload loop></audio>
+    <!-- NOLOOP -->
+    <audio class="clean" src="sound/fx/clean.wav" preload></audio>
+    <audio class="cooking" src="sound/fx/cooking.wav" preload></audio>
+    <audio class="dead" src="sound/fx/dead.wav" preload></audio>
+    <audio class="meds" src="sound/fx/meds.wav" preload></audio>
+    <audio class="money" src="sound/fx/money.wav" preload></audio>
+    <audio class="upgrade" src="sound/fx/upgrade.wav" preload></audio>
+    <audio class="write" src="sound/fx/write.wav" preload></audio>
+    <audio class="nope" src="sound/fx/nope.mp3" preload></audio>
+    <audio class="water" src="sound/fx/water.mp3" preload></audio>
+    <audio class="life" src="sound/fx/life.wav" preload></audio>
+  </div>
+
+  <script src="js/object.js"></script>
+  <script src="js/actions.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/init.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+.soldier {
+    position: absolute;
+    width: 63px;
+    height: 140px;
+    left: 540px;
+    top: 120px;
+    z-index: 3;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+.soldier.fade-in {
+    opacity: 1;
+}
+.soldier.limp {
+    background: url(../img/soldier/soldier-limping.png) 0 0 no-repeat;
+}
+.soldier.sick {
+    background: url(../img/soldier/soldier-sick.png) 0 0 no-repeat;
+}
+.soldier.bleed {
+    background: url(../img/soldier/soldier-bleed.png) 0 0 no-repeat;
+}
+
+.soldier.hidden {
+    display: none;
+}
+
